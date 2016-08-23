@@ -12,6 +12,9 @@ public class CarExample {
 		System.out.println("색깔 : "+myCar.color);
 		System.out.println("최고속도 : "+myCar.maxSpeed);
 		System.out.println("현재속도 : "+myCar.speed);  
+		//필드값 변경
+		myCar.speed = 60;
+		System.out.print("수정된 속도 : "+myCar.speed);
 	}
 
 }
