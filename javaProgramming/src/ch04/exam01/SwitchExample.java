@@ -8,6 +8,7 @@ public class SwitchExample {
 		num = num + 1; //1, 2, 3, 4, 5, 6*/
 		
 		int num = (int)(Math.random()*6) + 1;
+		
 
 		switch(num) {
 			case 1:

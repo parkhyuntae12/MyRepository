@@ -10,5 +10,6 @@ public class Promotion {
 		float v4 = v3;
 		double v5 = v3;
 		System.out.println("v4: " + v4);
+		
 	}
 }
