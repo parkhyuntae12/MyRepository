@@ -9,7 +9,7 @@ public class Example {
 		im.field = "자바";
 		im.method();  //im객체로접근해서 객체안에서 메소드호출
 		
-		
+		  
 		//Static Member 사용 // 클래스 이름활용
 	//	StaticMember.field="자바";
 	//	StaticMember.method();
