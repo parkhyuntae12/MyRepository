@@ -9,7 +9,7 @@ public class CarExample {
 		//car 객체 생성하고 위치 정보 얻기
 		try{
 			 myCar=new Car();
-		}catch(Exception e){}
+		}catch(Exception e){} 
 		//Car 객체가 있는지 조사
 			if(myCar!=null){
 				System.out.println("Car 객체 있음");
