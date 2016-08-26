@@ -18,9 +18,17 @@ public class TestExample {
 			
 			String choice = scanner.nextLine();
 			
-			if(choice.equals("1")){
-				System.out.print("총학생 수 : ");
-				boolean allstu
+			if(choice.equals("1")){ // 목록을 선택했을때
+				System.out.println("총학생 수 : ");
+				
+				boolean allstus = false; //글이 있으면 참,없으면 거짓
+				for(String[] allstus1: allstu){
+					if(allstus1 !=null){
+						allstus =true;
+					}
+				}
+				if(allstus)
+				
 				
 			}
 		}
