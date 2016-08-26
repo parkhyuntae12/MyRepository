@@ -7,6 +7,7 @@ public class TestExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
+		String [][] allstu = new String[100][];
 		Test test = null;
 		
 		while(true){
@@ -16,6 +17,12 @@ public class TestExample {
 			System.out.print("선택 : ");
 			
 			String choice = scanner.nextLine();
+			
+			if(choice.equals("1")){
+				System.out.print("총학생 수 : ");
+				boolean allstu
+				
+			}
 		}
 	}
 
