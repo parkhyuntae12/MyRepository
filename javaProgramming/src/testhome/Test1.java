@@ -8,5 +8,5 @@ public class Test1 {
 		boolean result = (x+y)<5;
 		System.out.println(result);
 	}
-
+ 
 }
