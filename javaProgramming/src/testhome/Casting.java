@@ -8,7 +8,7 @@ public class Casting {
 		char charvalue ='A';
 		double doublevalue=5.7;
 		String strvalue="A";
-		
+		 
 		double var = (double) intvalue;
 		byte var1 = (byte) intvalue;
 		int var2 = (int)doublevalue;

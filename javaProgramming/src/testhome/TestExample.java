@@ -27,7 +27,7 @@ public class TestExample {
 					if(allstus1 !=null){
 						allstus =true;
 					} 
-				} 
+				}  
 				if(allstus){
 					System.out.println("저장되어있는 글이 없습니다.");
 					continue;

@@ -11,7 +11,7 @@ public class Test {
 		
 	}
 	Test(int num,int score, String name){
-		this.num=num;
+		this.num=num; 
 		this.score=score;
 		this.name=name;
 	}
