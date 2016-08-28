@@ -6,7 +6,7 @@ public class Test1 {
 		// TODO Auto-generated method stub
 		int x=1,y=2;
 		boolean result = (x+y)<5;
-		System.out.println(result);
-	}
+		System.out.println(result); 
+	}   
  
 }
