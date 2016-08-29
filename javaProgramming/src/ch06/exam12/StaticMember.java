@@ -3,7 +3,7 @@ package ch06.exam12;
 public class StaticMember {
 	//Static Field
 	static String field;
-	//Static Block
+	//Static Block // 메소드 출력 가능
 	static{
 		System.out.println("Static Block 실행");
 		field="자바";
