@@ -8,9 +8,7 @@ public class TestExample {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		String [][] allstu = new String[100][];
-		Test test = null;
-		
-		
+		Test test1 = new Test();
 		while(true){
 			System.out.println("-------------------------------------------------------------------------------");
 			System.out.println("1. 목록 | 2. 글쓰기 | 3. 상세 보기 | 4. 수정 | 5. 삭제 | 6. 종료");
@@ -20,9 +18,9 @@ public class TestExample {
 			String choice = scanner.nextLine();
 			
 			if(choice.equals("1")){ // 목록을 선택했을때
-				System.out.println("총학생 수 : ");
 				
 				boolean allstus = false; //글이 있으면 참,없으면 거짓
+				
 				for(String[] allstus1: allstu){
 					if(allstus1 !=null){
 						allstus =true;
@@ -38,13 +36,14 @@ public class TestExample {
 				
 				for(String[] all : allstu){
 					if(all !=null)
-						System.out.println(all[0]+"\t"+all[1]+ "\t" + all[2] + "\t   " + all[3]);
+						System.out.println(test1.getNum()+ "\t" +test1.getTitle()+ "\t" + test1.getWriter() + "\t   " + test1.getHitcount());
 				}
 				System.out.println("***************************************");
 				System.out.println();
+				
 			}else if(choice.equals("2")){
 				System.out.print("제목을 입력하세요 : ");
-				String title = scanner.nextLine();
+				String Title = scanner.nextLine();
 				System.out.print("내용을 입력하세요(한 줄만 가능) : ");
 				String content = scanner.nextLine();
 				System.out.print("글쓴이를 입력하세요 : ");
@@ -52,7 +51,7 @@ public class TestExample {
 				
 				for(int i=0; i<allstu.length;i++){
 					if(allstu[i] == null){
-						String[]all ={String.valueOf(i),title,writer, "0", content };
+						String[]all ={test1.getTitle(),test1.getContent(),test1.getWriter()};
 						allstu[i] =all;
 						break;
 					}
@@ -76,7 +75,7 @@ public class TestExample {
 				
 				for ( String[] all : allstu ) {
 					if ( all != null )
-						System.out.println(all[0] + "\t" + all[1] + "\t" + all[2] + "\t   " + all[3]);
+						System.out.println(test1.getNum()+"\t"+test1.getTitle()+ "\t" + test1.getWriter() + "\t   " + test1.getHitcount());
 				}
 				
 				System.out.println("***************************************");
@@ -106,12 +105,12 @@ public class TestExample {
 					} else {
 						allstu[num][3] = String.valueOf( 1 + Integer.parseInt(allstu[num][3]) );
 
-						System.out.println("번호 : " + allstu[num][0]);
-						System.out.println("제목 : " + allstu[num][1]);
-						System.out.println("글쓴이 : " + allstu[num][2]);
-						System.out.println("조회수 : " + allstu[num][3]);
+						System.out.println("번호 : " + test1.getNum());
+						System.out.println("제목 : " + test1.getTitle());
+						System.out.println("글쓴이 : " + test1.getWriter());
+						System.out.println("조회수 : " + test1.getHitcount());
 						System.out.println("내용 : ");
-						System.out.println(allstu[num][4] + "\n");
+						System.out.println(test1.getContent() + "\n");
 					}
 					
 					break;
@@ -137,7 +136,7 @@ public class TestExample {
 				
 				for ( String[] all : allstu ) {
 					if ( all != null )
-						System.out.println(all[0] + "\t" + all[1] + "\t" + all[2] + "\t   " + all[3]);
+						System.out.println(test1.getNum()+"\t"+test1.getTitle()+ "\t" + test1.getWriter() + "\t   " + test1.getHitcount());
 				}
 				
 				System.out.println("***************************************");
@@ -215,7 +214,7 @@ public class TestExample {
 				
 				for ( String[] all : allstu ) {
 					if ( all != null )
-						System.out.println(all[0] + "\t" + all[1] + "\t" + all[2] + "\t   " + all[3]);
+						System.out.println(test1.getNum()+"\t"+test1.getTitle()+ "\t" + test1.getWriter() + "\t   " + test1.getHitcount());
 				}
 				
 				System.out.println("***************************************");

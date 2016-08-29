@@ -2,37 +2,48 @@ package testhome;
 
 public class Test {
 	//Field
-	private int num; // 번호
-	private int score; //점수
-	private String name; //이름
+	private int num; 
+	private String title; 
+	private String content; 
+	private String writer;
+	private int hitcount;
 	
+	public int getHitcount() {
+		return hitcount;
+	}
+	public void setHitcount(int hitcount) {
+		this.hitcount = hitcount;
+	}
 	public int getNum() {
 		return num;
 	}
 	public void setNum(int num) {
 		this.num = num;
 	}
-	public int getScore() {
-		return score;
+	public String getTitle() {
+		return title;
 	}
-	public void setScore(int score) {
-		this.score = score;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public String getName() {
-		return name;
+	public String getContent() {
+		return content;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setContent(String content) {
+		this.content = content;
 	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	
 	
 	//Constructor
 	Test(){
 		
 	}
-	Test(int num,int score, String name){
-		this.num=num; 
-		this.score=score;
-		this.name=name;
-	}
+	
 	//Method
 }
