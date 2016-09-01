@@ -3,7 +3,7 @@ package testhome;
 import java.util.Scanner;
 
 public class BankApplication {
-	private static Acount[] accountArray = new Account[100];
+//	private static Acount() accountArray = new Account[100];
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -48,7 +48,6 @@ public class BankApplication {
 		
 	}
 	//Acount배열에서 ano와 동일한 Account 객체 찾기
-	private static Account findAccount(String ano){
+	//private static Account findAccount(String ano){
 		
 	}
-}
