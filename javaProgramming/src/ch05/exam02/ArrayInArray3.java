@@ -10,7 +10,7 @@ public class ArrayInArray3 {
 		
 		for(int i1=0; i1<scores.length; i1++) {
 			for(int i2=0; i2<scores[i1].length; i2++) {
-				//System.out.println(scores[i1][i2]);
+				System.out.println(scores[i1][i2]);
 			}
 		}
 	}
