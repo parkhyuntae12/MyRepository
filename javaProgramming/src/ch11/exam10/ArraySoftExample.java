@@ -8,7 +8,7 @@ public class ArraySoftExample {
 		// TODO Auto-generated method stub
 		int[] scores ={99,97,98};
 		
-		Arrays.sort(scores); //오름차순 정렬
+		Arrays.sort(scores); //sort:오름차순 정렬
 		System.out.println(Arrays.toString(scores));
 		
 		Member2[] members ={

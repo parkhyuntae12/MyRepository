@@ -15,7 +15,7 @@ public class ByteToStringExample {
 		System.out.println(str2);*/
 		
 		//--------------------------------------------------------------
-		/*String str3="홍길동";//한글은 아스키코드로 표현할수없다 
+		String str3="홍길동";//한글은 아스키코드로 표현할수없다 
 		byte[] strBytes3 = str3.getBytes();
 		
 		String str4 = new String(strBytes3);//한문자당 2바이트 유니코드로 읽겠다
@@ -27,7 +27,7 @@ public class ByteToStringExample {
 		 String str6 = new String(strBytes5,"UTF-8");//utf-8문자셋으로 받은 배열을 다시 utf-8로복원해서
 		                                                          //읽겠다.(=디코딩)
 		 System.out.println(str6);
-		 */
+		 
 		 String str7 = "ab홍길동";
 		 byte[] strBytes6 = str7.getBytes("EUC-KR");
 		 String str8 = new String(strBytes6,"EUC-KR");
