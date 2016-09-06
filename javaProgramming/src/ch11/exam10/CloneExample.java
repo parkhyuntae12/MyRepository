@@ -8,7 +8,7 @@ public class CloneExample {
 		// TODO Auto-generated method stub
 		int [] arr1 = {1,2,3};
 		int [] arr2 =arr1.clone();
-		System.out.println(arr1 == arr2);
+		System.out.println(arr1 == arr2); 
 		System.out.println(Arrays.equals(arr1, arr2));
 		
 		Member m1 = new Member("hong","±æµ¿");

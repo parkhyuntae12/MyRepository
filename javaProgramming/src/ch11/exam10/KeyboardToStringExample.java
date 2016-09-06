@@ -12,7 +12,8 @@ public class KeyboardToStringExample {
 		int readByteNo = System.in.read(bytes);
 		
 		//String str = new String(bytes);
-		String str = new String(bytes,0,readByteNo-2);
+		String str = new String(bytes,0,readByteNo-2);//readByteNo-2 2를빼준이유는 엔터키부분을빼려고
+																    // hello/r/n /r/n(엔터키)
 		System.out.println(str);
 	}
 }

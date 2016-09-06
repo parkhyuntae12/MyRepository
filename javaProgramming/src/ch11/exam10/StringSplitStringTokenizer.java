@@ -18,7 +18,7 @@ public class StringSplitStringTokenizer {
 			String name = st.nextToken();
 			System.out.println(name);
 		
-			
+		}
 			data = "홍길동&이수홍,박연수,감자바-최명호";
 			
 			dataArray = data.split("&|,|-");
@@ -26,6 +26,5 @@ public class StringSplitStringTokenizer {
 			for(String name1 : dataArray){
 				System.out.println(name1);	
 			}
-		}
 	}
 }

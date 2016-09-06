@@ -8,6 +8,6 @@ public class StringEqualsExample {
 		String strVar2 = "홍길동";
 		
 		System.out.println(strVar1 == strVar2);//문자열일때 번지수 비교
-		System.out.println(strVar1.equals(strVar2));
+		System.out.println(strVar1.equals(strVar2));//값을비교
 	}
 }

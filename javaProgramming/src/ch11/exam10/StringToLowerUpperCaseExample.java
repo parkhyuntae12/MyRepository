@@ -9,11 +9,11 @@ public class StringToLowerUpperCaseExample {
 		System.out.println(oldStr);
 		System.out.println(newStr);
 		System.out.println(oldStr == newStr);
-		
+		System.out.println("--------------------------------------------------------------------------- ");
 		System.out.println(oldStr.equals("java programming"));
 		System.out.println(oldStr.toLowerCase().equals("JAVA programming".toLowerCase()));
 		System.out.println(oldStr.toUpperCase().equals("java programming".toUpperCase()));
-		
+		System.out.println("--------------------------------------------------------------------------- "); 
 		String targetStr = "            Java        Programming                 ";
 		System.out.println(oldStr == targetStr);
 		System.out.println(oldStr.equals(targetStr));
