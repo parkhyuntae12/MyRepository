@@ -1,32 +1,27 @@
 package testhome.test11;
 
 public class Student {
-	private String StudentNum;
+	private String studentNum;
 	
 	public Student(String studentNum){
-		this.StudentNum=StudentNum;
+		this.studentNum = studentNum;
 	}
 	public String getStudentNum(){
-		return StudentNum;
+		return studentNum;
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Student){
-		return super.equals(obj);
-		
-		if(StudentNum.equals(studentNum.getStudentNum())){
-			return true;
+			Student student = (Student) obj;
 		}
+		if(studentNum.equals(student.getStudentNum){
+			return true;
 		}
 		return false;
 	}
 	@Override
 	public int hashCode() {
-	
-		return StudentNum.hashCode();
+		return studentNum.hashCode();
 	}
-	
-	
-	
 }
