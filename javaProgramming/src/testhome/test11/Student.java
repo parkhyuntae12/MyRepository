@@ -15,6 +15,7 @@ public class Student {
 		if(obj instanceof Student){
 			Student student = (Student) obj;
 		}
+		
 		if(studentNum.equals(student.getStudentNum){
 			return true;
 		}

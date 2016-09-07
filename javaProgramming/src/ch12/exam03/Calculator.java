@@ -10,7 +10,7 @@ public class Calculator {
 	public synchronized void setMemory(int memory) {
 		this.memory = memory;
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {}
 			System.out.println(Thread.currentThread().getName()+": "+this.memory);//현재이코드를 실행하는 스레드이름
 	}
