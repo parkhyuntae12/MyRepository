@@ -23,7 +23,7 @@ public class Board {
 	Board(String title,int no){
 		
 	}
-	Board(int no,String title,String content){
+	Board(String string,String title,String content){
 		
 	}
 	Board(int no,String title,String content,String writer){

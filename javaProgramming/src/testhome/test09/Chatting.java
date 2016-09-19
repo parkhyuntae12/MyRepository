@@ -1,6 +1,6 @@
 package testhome.test09;
 
-public class Chatting {
+/*public class Chatting {
 	void startChat(String chatId){
 	String nickname=null;
 	nickname = chatId;
@@ -9,3 +9,4 @@ public class Chatting {
 	}
 	}
 }	
+*/

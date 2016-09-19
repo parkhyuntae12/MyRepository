@@ -1,6 +1,6 @@
 package testhome.test11;
 
-public class Student {
+/*public class Student {
 	private String studentNum;
 	
 	public Student(String studentNum){
@@ -25,4 +25,4 @@ public class Student {
 	public int hashCode() {
 		return studentNum.hashCode();
 	}
-}
+}*/

@@ -1,6 +1,6 @@
 package testhome.test11;
 
-import java.util.HashMap;
+/*import java.util.HashMap;
 
 public class StudentExample {
 
@@ -13,4 +13,4 @@ public class StudentExample {
 		String score = hashMap.get(new Student("1"));
 		System.out.println("1번학생의 총점 : "+score);
 	}
-}
+}*/
