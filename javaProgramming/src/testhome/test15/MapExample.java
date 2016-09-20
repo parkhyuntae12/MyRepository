@@ -13,7 +13,7 @@ public class MapExample {
 		map.put("hong", 86);
 		map.put("white", 92);
 		
-		String name = null;
+		String name=null;
 		int maxScore=0;
 		int totalScore=0;
 		
