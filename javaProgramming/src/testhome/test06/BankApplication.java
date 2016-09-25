@@ -2,7 +2,7 @@ package testhome.test06;
 
 import java.util.Scanner;
 
-/*public class BankApplication {
+public class BankApplication {
 	private static Account[] accountArray = new Account[100];
 	private static Scanner scanner = new Scanner(System.in);
 	
@@ -18,7 +18,7 @@ import java.util.Scanner;
 			int selectNo = scanner.nextInt();
 			
 			if(selectNo==1){
-				createAccount();
+				createAccount1();
 			}else if(selectNo==2){
 				accountList();
 			}else if(selectNo==3){
@@ -87,4 +87,14 @@ import java.util.Scanner;
 			
 		}
 	}
-}*/
+
+	private static void accountList() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void createAccount1() {
+		// TODO Auto-generated method stub
+		
+	}
+}
