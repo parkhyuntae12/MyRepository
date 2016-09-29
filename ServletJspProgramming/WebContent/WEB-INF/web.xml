@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <!-- 서블릿 등록 -->
+  <servlet>
+  	 <servlet-name>now</servlet-name> <!-- <시작태그> 값 </끝 태그> --> <!-- name의 경우 식별자이다(쉽게 생각하면 변수이름) -->
+  	 <servlet-class>servlet.NowServlet</servlet-class> <!-- 패키지 주소도 포함 시켜야 된다. -->
+  	 <init-param> <!-- NowServlet안에서 밑에 변수이름과 값을 사용할 수 있도록 하는것. -->
+			<param-name>location</param-name>
+			<param-value>부산</param-value>
+	 </init-param>
+  	 <load-on-startup>1</load-on-startup><!-- 애플리케이션이 배치되자마자 객체를 생성,아무 숫자나 넣자,숫자는 우선순위다. 여러 서블릿을 등록할경우 우선순위 설정 -->
+  	 <!-- 1이 가장 먼저 생성 -->
+  </servlet>
+  
+  
+  <!-- 서블릿 URL 매핑 --> <!-- 매핑은 A와B를 서로 연결시킨다라는 의미다. -->
+  <servlet-mapping>
+  		<servlet-name>now</servlet-name> <!-- 서블릿 등록한 이름 -->
+  		<url-pattern>/now</url-pattern> <!-- now의 의미는 /ServletJspProgramming/now 로 의미로 요청HTTP의 시작행을 뜻한다. -->
+  		<!-- EX)) GET/ServletJspProgramming(=context)/now  HTTP/1/1 -->
+  </servlet-mapping>
+  
+</web-app>
