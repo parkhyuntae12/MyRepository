@@ -20,7 +20,7 @@ public class Exam03Controller {
 		return "exam03/index";
 	}
 	@RequestMapping("/join")
-	public String join(Member member){
+	public String join(Member member){//커맨드 객체 
 		logger.info("join 요청 처리");
 		logger.info("mid :"+member.getMid());
 		logger.info("mname :"+member.getMname());
