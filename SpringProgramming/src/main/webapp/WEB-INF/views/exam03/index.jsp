@@ -13,7 +13,7 @@
 		<form action="/myapp/exam03/join">
 			아이디:<input type="text" name="mid" value="fall"/><br/>
 			이름:<input type="text" name="mname" value="한가을"/><br/>
-			비밀번호:<input type="password" name="mpassword]" value="12345"/><br/>
+			비밀번호:<input type="password" name="mpassword" value="12345"/><br/>
 			이메일 주소:<input type="email" name="memail" value="fall@naver.com"/><br/>
 			전화번호:<input type="tel" name="mtel" value="010-123-1234"/><br/>
 			직업:
