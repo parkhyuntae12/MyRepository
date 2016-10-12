@@ -1,16 +1,19 @@
 package com.mycompany.myapp.exam11.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mycompany.myapp.exam11.dto.Board;
 import com.mycompany.myapp.exam11.dto.Member;
+import com.mycompany.myapp.exam11.service.Exam11BoardService;
 import com.mycompany.myapp.exam11.service.Exam11MemberService;
 
 @Controller("MemberController")//이름을 넣어주지 않으면 디폴트로 맨앞글자가 소문자로 바뀐 컨트롤러이름으로 생성
@@ -55,7 +58,7 @@ public class Exam11Controller {
 		return "redirect:/exam11/memberLogin";
 	}
 	
-	@RequestMapping(value="/memberLoginForm",method=RequestMethod.GET)
+	@RequestMapping(value="/memberLogin",method=RequestMethod.GET)
 	public String memberLoginForm(){
 		logger.info("memberLogin(GET) 처리");
 		return "exam11/memberLoginForm";
@@ -83,7 +86,7 @@ public class Exam11Controller {
 		return "redirect:/exam11/index";
 	}
 	
-	@RequestMapping(value="/board",method=RequestMethod.GET)
+	@RequestMapping(value="/boardWrite",method=RequestMethod.GET)
 	public String boardWriteForm(){
 		logger.info("boardWriteForm 처리");
 		return "exam11/boardWriteForm";
@@ -92,7 +95,15 @@ public class Exam11Controller {
 	@RequestMapping(value="/boardWrite",method=RequestMethod.POST)
 	public String boardWrite(Board board){
 		logger.info("boardWrite 처리");
-		boardService.insert(board);
-		return "redirext:/exam11/index";
+		boardService.write(board);
+		return "redirect:/exam11/index";
+	}
+	
+	@RequestMapping(value="/boardList")
+	public String boardList(Model model){
+		logger.info("boardList 처리");
+		List<Board> list = boardService.getList();
+		model.addAttribute("boardList",list);
+		return "exam11/boardList";
 	}
 }
