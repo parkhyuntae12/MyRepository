@@ -17,7 +17,10 @@
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!--bean태그는 스프링관리객체로 만들어줌, 여기서 이름을 지어주지않은 이유는 예약된 이름이 있기 때문애-->
 		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<!--property는 setter 주입을 해준다 setPrefix("/WEB-INF/views") setSuffix(".jsp") 
+		     ref는 객체의 참조를 넘길때 value는 값을 넘길때-->
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	

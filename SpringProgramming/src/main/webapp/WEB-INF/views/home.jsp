@@ -18,7 +18,8 @@
 		7.<a href="/myapp/exam07/index">Exam07</a>:컨트롤러에서 JSP로 데이터 객체 전달<br/>
 		8.<a href="/myapp/exam08/index">Exam08</a>:리다이렉트<br/><br/>
 		9.<a href="/myapp/exam09/index">Exam09</a>:의존성 주입(DI): XML 설정 파일 이용<br/>
-		10.<a href="/myapp/exam10/index">Exam10</a>:의존성 주입(DI): 어노테이션 이용<br/>
+		10.<a href="/myapp/exam10/index">Exam10</a>:의존성 주입(DI): 어노테이션 이용<br/><br/>
+		11.<a href="/myapp/exam11/index">Exam11</a>:서비스 계층과 데이터(퍼시스턴스) 계층<br/>
 	<!--3.<a href="exam01/join">컨트롤러 및 요청 매핑 메소드 작성</a><br/><!--상대경로(페이지 수가 많아짐)-->
 	</body>
 </html>
