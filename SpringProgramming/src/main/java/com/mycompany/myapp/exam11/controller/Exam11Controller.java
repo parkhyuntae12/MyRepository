@@ -21,11 +21,12 @@ import com.mycompany.myapp.exam11.service.Exam11MemberService;
 public class Exam11Controller {
 	private static final Logger logger = LoggerFactory.getLogger(Exam11Controller.class);
 	
-	@Autowired
+	@Autowired//setter,생성자,필드 주입이 모두가능
 	private Exam11MemberService memberService;
 	
 	@Autowired
 	private Exam11BoardService boardService;
+	//@Resource(name="a")//setter 주입만 가능하다
 	
 	@RequestMapping("/index")
 	public String index(){
@@ -105,5 +106,35 @@ public class Exam11Controller {
 		List<Board> list = boardService.getList();
 		model.addAttribute("boardList",list);
 		return "exam11/boardList";
+	}
+	
+	@RequestMapping("/boardView")
+	public String boardView(int bno, Model model){//int타입으로 했을때 값이 넘어오지않을경우 예외발생(디폴트값을 주던지, 확실한값보장해야함)
+		logger.info("boardView 처리");
+		Board board=boardService.getBoard(bno); 
+		model.addAttribute("board", board);
+		return "exam11/boardView";
+	}
+	
+	@RequestMapping(value="/boardUpdate", method=RequestMethod.GET)
+	public String boardUpdate(int bno, Model model){
+		logger.info("boardUpdateForm 처리");
+		Board board=boardService.getBoard(bno); 
+		model.addAttribute("board", board);
+		return "exam11/boardUpdateForm";
+	}
+	
+	@RequestMapping(value="/boardUpdate", method=RequestMethod.POST)
+	public String boardUpdate(Board board){
+		logger.info("boardUpdate 처리");
+		boardService.updateBoard(board); 
+		return "redirect:/exam11/boardList";
+	}
+	
+	@RequestMapping(value="/boardDelete", method=RequestMethod.GET)
+	public String boardDelete(int bno){
+		logger.info("boardDelete 처리");
+		boardService.deleteBoard(bno); 
+		return "redirect:/exam11/boardList";
 	}
 }
