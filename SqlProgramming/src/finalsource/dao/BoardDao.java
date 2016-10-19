@@ -31,7 +31,7 @@ public class BoardDao {
 		return rowNo;
 	}
 	
-	public Board selectByMid(int bno) throws SQLException{
+	public Board selectByBno(int bno) throws SQLException{
 		String sql="select btitle,bcontent,bwriter,bhitcount,bdate from board where mid=?";
 		Board board = null;
 		PreparedStatement pstmt = conn.prepareStatement(sql);
