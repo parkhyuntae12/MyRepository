@@ -1,4 +1,4 @@
-package ch07.dto;
+package finalsource.dto;
 
 import java.util.Date;
 
@@ -46,5 +46,4 @@ public class Board {
 	public void setBdate(Date bdate) {
 		this.bdate = bdate;
 	}
-	
 }

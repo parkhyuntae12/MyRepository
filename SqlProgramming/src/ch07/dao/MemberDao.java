@@ -38,7 +38,7 @@ public class MemberDao {
 				member.setMid(rs.getString("mid"));
 				member.setMname(rs.getString("mname"));
 				member.setMage(rs.getInt("mage"));
-				member.setMbrith(rs.getDate("mbrith"));
+				member.setMbirth(rs.getDate("mbirth"));
 			}
 			rs.close();
 			pstmt.close();
@@ -65,7 +65,7 @@ public class MemberDao {
 				member.setMid(rs.getString("mid"));
 				member.setMname(rs.getString("mname"));
 				member.setMage(rs.getInt("mage"));
-				member.setMbrith(rs.getDate("mbrith"));
+				member.setMbirth(rs.getDate("mbirth"));
 				list.add(member);
 			}
 			rs.close();

@@ -1,4 +1,4 @@
-package ch07.dto;
+package ch08.dto;
 
 import java.util.Date;
 
@@ -26,7 +26,7 @@ public class Member {
 	public void setMage(int mage) {
 		this.mage = mage;
 	}
-	public Date getMbrith() {
+	public Date getMbirth() {
 		return mbirth;
 	}
 	public void setMbirth(Date mbirth) {
