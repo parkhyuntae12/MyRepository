@@ -86,7 +86,7 @@ create table member(
 );
 create table board(
   bno number(10) constraint pk_board_bno primary key,
-  bwrite varchar(10) constraint pk_board_bwriter references member(mid) 
+  bwrite varchar(10) constraint fk_board_bwriter references member(mid) 
 );
 --Section10 테이블 레벨로 제약조건 설정(컬럼을 모두 만든후 설정)
 create table member(
