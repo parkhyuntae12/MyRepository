@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="SchemaObject" objectID="8C81B0E2-6080-2A16-E282-A5BB4A6D1D54" name="TESTER1" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.SchemaObject" propertyParentId="A950029E-9D73-B0E4-F1B7-C622A5A65004" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="AF5A0E74-95A4-3FAD-FD48-8FBCF345761D" name="board" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="A950029E-9D73-B0E4-F1B7-C622A5A65004" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="7DF727C1-6EAA-ABCF-F945-6A2DA8BAFBEA" name="member" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="A950029E-9D73-B0E4-F1B7-C622A5A65004" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="7648EDE5-FED9-A96F-4426-2818578FFE9D" name="fk_board_writer" seqName="seg_0" containerID="AF5A0E74-95A4-3FAD-FD48-8FBCF345761D" refContainerID="7DF727C1-6EAA-ABCF-F945-6A2DA8BAFBEA" propertyClassName="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" propertyParentId="A950029E-9D73-B0E4-F1B7-C622A5A65004" propertySourceId="7DF727C1-6EAA-ABCF-F945-6A2DA8BAFBEA" propertyTargetId="AF5A0E74-95A4-3FAD-FD48-8FBCF345761D"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>
