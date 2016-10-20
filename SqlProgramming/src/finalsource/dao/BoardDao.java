@@ -18,27 +18,25 @@ public class BoardDao {
 	}
 
 	public int insert(Board board) throws SQLException{
-		String sql = "insert into board(bno,btitle,bcontent,bwriter,bhitcount,bdate) values(?,?,?,?,?,?)";
+		String sql = "insert into board(bno,btitle,bcontent,bwriter,bhitcount,bdate) values(seq_board_bno.nextval,?,?,?,0,sysdate)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setInt(1, board.getBno());
-		pstmt.setString(2, board.getBtitle());
-		pstmt.setString(3, board.getBcontent());
-		pstmt.setString(4, board.getBwriter());
-		pstmt.setInt(5, board.getBhitcount());
-		pstmt.setDate(6, new Date(board.getBdate().getTime()));
+		pstmt.setString(1, board.getBtitle());
+		pstmt.setString(2, board.getBcontent());
+		pstmt.setString(3, board.getBwriter());
 		int rowNo= pstmt.executeUpdate();
 		pstmt.close();
 		return rowNo;
 	}
 	
 	public Board selectByBno(int bno) throws SQLException{
-		String sql="select btitle,bcontent,bwriter,bhitcount,bdate from board where mid=?";
+		String sql="select btitle,bcontent,bwriter,bhitcount,bdate from board where bno=?";
 		Board board = null;
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setInt(1, bno);
 		ResultSet rs = pstmt.executeQuery();
 		if(rs.next()){
 			board= new Board();
+			//board.setBno(rs.getInt("bno"));
 			board.setBtitle(rs.getString("btitle"));
 			board.setBcontent(rs.getString("bcontent"));
 			board.setBwriter(rs.getString("bwriter"));
@@ -52,13 +50,14 @@ public class BoardDao {
 	
 	public List<Board> selectByBtitle(String btitle) throws SQLException{//List 타입일때 값이 없을시 리턴타입은 빈 Member 객체가 리턴된다
 		List<Board> list = new ArrayList<>();
-		String sql = "select bno,bcontent,bwriter,bhitcount,bdate from board like btitle=?";
+		String sql = "select bno,bcontent,bwriter,bhitcount,bdate from board where btitle like ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, "%"+btitle+"%");
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()){
 			Board board = new Board();
 			board.setBno(rs.getInt("bno"));
+			//board.setBtitle(rs.getString("btitle"));
 			board.setBcontent(rs.getString("bcontent"));
 			board.setBwriter(rs.getString("bwriter"));
 			board.setBhitcount(rs.getInt("bhitcount"));

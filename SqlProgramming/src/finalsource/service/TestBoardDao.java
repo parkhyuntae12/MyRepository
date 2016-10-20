@@ -14,8 +14,8 @@ import finalsource.dto.Member;
 public class TestBoardDao {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//testInsert();
-		testSelectByBno();
+		testInsert();
+		//testSelectByBno();
 		//testSelectByBtitle();
 		//testUpdate();
 		//testDeleteByBno();
@@ -30,14 +30,12 @@ public class TestBoardDao {
 				dao.setConn(conn);
 				
 				Board board = new Board();
-				board.setBno(4);
 				board.setBtitle("제목10");
 				board.setBcontent("내용10");
 				board.setBwriter("user10");
-				board.setBhitcount(26);
-				board.setBdate(new Date());
 				int rowNo = dao.insert(board);
-				System.out.println(rowNo+"행이 저장됨");
+				
+			    System.out.println(rowNo+"행이 저장됨");
 			} catch (Exception e) {
 				e.printStackTrace();
 			  }finally{
@@ -54,12 +52,13 @@ public class TestBoardDao {
 				BoardDao dao = new BoardDao();
 				dao.setConn(conn);
 				
-				Board board = dao.selectByBno(1);
+				Board board = dao.selectByBno(4);
 				if(board !=null){
 					System.out.print(board.getBno()+":");
 					System.out.print(board.getBtitle()+":");
 					System.out.print(board.getBcontent()+":");
 					System.out.print(board.getBwriter()+":");
+					System.out.print(board.getBhitcount()+":");
 					System.out.print(board.getBdate()+":");
 					System.out.println();
 				}
@@ -132,7 +131,7 @@ public class TestBoardDao {
 				BoardDao dao = new BoardDao();
 				dao.setConn(conn);
 				
-				int rowNo = dao.deleteByBno(10);
+				int rowNo = dao.deleteByBno(4);
 				System.out.println(rowNo+"행이 삭제됨");
 				
 			} catch (Exception e) {
