@@ -126,5 +126,11 @@ and e1.employee_id=101;
   on member.mid=board.bwriter;
   
   
+  --full outer join
+  select mid, mname, bno, btitle
+  from member
+  full outer join board
+  on member.mid=board.bwriter;
+  
   
   

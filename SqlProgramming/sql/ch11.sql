@@ -51,3 +51,5 @@ update dept set loc=(select loc from dept where deptno=40) where deptno=20;
 --3.5 서브 쿼리를 이용한 데이터 삭제
 --영업부서의 사원을 삭제하세요
 delete emp where deptno=(select deptno from dept where dname='영업부');
+
+delete emp where deptno=(select deptno from dept where dname='영업부');
