@@ -133,6 +133,7 @@ public class TestBoardDao {
 				
 				int rowNo = dao.deleteByBno(4);
 				System.out.println(rowNo+"행이 삭제됨");
+			//	System.out.println(rowNo+"행이 삭제됨");
 				
 			} catch (Exception e) {
 				e.printStackTrace();

@@ -45,7 +45,7 @@ create table emp3 as select * from emp where 1=0;
 --emp3을 만들었다면 10번 부서의 사원들만 복사하세요
 insert into emp3
 select * from emp where deptno=10;
---3.4 서브 쿼리를 이용한 데이터변경
+--3.4 서브 쿼리를 이용한 데이터변경    
 --20번 부서의 위치를 40번 부서의 위치로 변경하세요
 update dept set loc=(select loc from dept where deptno=40) where deptno=20;
 --3.5 서브 쿼리를 이용한 데이터 삭제

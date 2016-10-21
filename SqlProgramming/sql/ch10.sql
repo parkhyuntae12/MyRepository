@@ -86,7 +86,7 @@ and e1.employee_id=101;
   inner join board
   on member.mid=board.bwriter;
   
-  select mid, mname, bno, btitle
+  select mid, mname, bno,btitle
   from member
   left outer join board
   on member.mid=board.bwriter
