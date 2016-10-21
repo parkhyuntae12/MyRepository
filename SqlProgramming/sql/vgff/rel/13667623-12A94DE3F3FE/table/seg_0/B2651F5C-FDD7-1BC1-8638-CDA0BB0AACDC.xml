@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2651F5C-FDD7-1BC1-8638-CDA0BB0AACDC" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JOBS">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOBS</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>jobs table with job titles and salary ranges. Contains 19 rows.&lt;br/&gt;References with employees and job_history table.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="JOB_ID" id="9AD3BAEF-51E1-C5FF-A23C-1C20B7AFFC3B">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Primary key of jobs table.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JOB_TITLE" id="110C1A58-D022-A6ED-1529-82DD72C314C6">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>JOB_TITLE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>A not null column that shows job title, e.g. AD_VP, FI_ACCOUNTANT</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>35 BYTE</dataTypeSize>
+<ownDataTypeParameters>35 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JOB_TITLE_NN</notNullConstraintName>
+</Column>
+<Column name="MIN_SALARY" id="AC143073-DF5C-619F-5A2A-30FF1E89DF04">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>MIN_SALARY</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Minimum salary for a job title.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAX_SALARY" id="2BFD140C-1482-FBC1-8A90-71F3FE91EF2C">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOBS</sourceObjSchema>
+<sourceObjName>MAX_SALARY</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Maximum salary for a job title</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2BF1A89F-5896-84DE-6978-73BFDADDCCAF" name="JOB_ID_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_ID_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AD3BAEF-51E1-C5FF-A23C-1C20B7AFFC3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6A0C94DC-8EBC-6521-1E53-16054C2648E9" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JOB_ID_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_ID_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AD3BAEF-51E1-C5FF-A23C-1C20B7AFFC3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

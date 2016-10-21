@@ -1,0 +1,214 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA94C301-31F8-94A9-F660-D1145F46EA31" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JOB_HISTORY">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_HISTORY</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Table that stores job history of the employees. If an employee&lt;br/&gt;changes departments within the job or changes jobs within the department,&lt;br/&gt;new rows get inserted into this table with old job information of the&lt;br/&gt;employee. Contains a complex primary key: employee_id+start_date.&lt;br/&gt;Contains 25 rows. References with jobs, employees, and departments tables.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="0AC2535C-DEEE-5BAB-14D2-218A40D60857">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>A not null column in the complex primary key employee_id+start_date.&lt;br/&gt;Foreign key to employee_id column of the employee table</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_EMPLOYEE_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="AB7B4F7F-0004-7CA5-B3B4-F2E37B048265" referredColumn="D69F8263-6AE3-F107-89E8-FF0D615CF162"/>
+</associations>
+</Column>
+<Column name="START_DATE" id="9F3F0ED1-E6AD-D0D3-55CA-5442FF74BA6E">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>START_DATE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>A not null column in the complex primary key employee_id+start_date.&lt;br/&gt;Must be less than the end_date of the job_history table. (enforced by&lt;br/&gt;constraint jhist_date_interval)</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_START_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="END_DATE" id="AFEECB69-09C6-886F-053E-3A28C11D22D6">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>END_DATE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Last day of the employee in this job role. A not null column. Must be&lt;br/&gt;greater than the start_date of the job_history table.&lt;br/&gt;(enforced by constraint jhist_date_interval)</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_END_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="15D76C5A-8CAF-7171-46DE-BAFEAAAFDECE">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Job role in which the employee worked in the past; foreign key to&lt;br/&gt;job_id column in the jobs table. A not null column.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="6094BC17-6943-E068-BC4B-F4C30151496F" referredColumn="9AD3BAEF-51E1-C5FF-A23C-1C20B7AFFC3B"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="E8225F2D-CD06-C12A-3655-CC0C46932708">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Department id in which the employee worked in the past; foreign key to deparment_id column in the departments table</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6298F84F-7F4E-7A5D-FF60-6229711A41D3" referredColumn="80D95614-ECF6-7303-D90E-1198B6978835"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF49EAC8-B7B7-5A73-DFF2-F3C962BBBB0E" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AC2535C-DEEE-5BAB-14D2-218A40D60857"/>
+<colUsage columnID="9F3F0ED1-E6AD-D0D3-55CA-5442FF74BA6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="956A711F-527D-703D-E183-957E5274C694" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JHIST_DEPARTMENT_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_DEPARTMENT_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8225F2D-CD06-C12A-3655-CC0C46932708"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E42DFA03-BE08-714B-C66D-AEE61C002333" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JHIST_EMPLOYEE_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMPLOYEE_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AC2535C-DEEE-5BAB-14D2-218A40D60857"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40E806C8-6D49-83D0-4A73-D39A3A20EAC3" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AC2535C-DEEE-5BAB-14D2-218A40D60857"/>
+<colUsage columnID="9F3F0ED1-E6AD-D0D3-55CA-5442FF74BA6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC7B3888-B763-8F20-07BF-FCD7E774D6F1" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="JHIST_JOB_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_JOB_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15D76C5A-8CAF-7171-46DE-BAFEAAAFDECE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6917E80-ADC6-B1EA-EECA-4D35132DF72D" name="JHIST_DEPT_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8225F2D-CD06-C12A-3655-CC0C46932708"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4ECF851-B7BF-2428-BCFC-5A1742BECB43" name="JHIST_EMP_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AC2535C-DEEE-5BAB-14D2-218A40D60857"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1AC9F4DE-F45B-D238-78DD-275145158A99" name="JHIST_JOB_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15D76C5A-8CAF-7171-46DE-BAFEAAAFDECE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="JHIST_DATE_INTERVAL" directorySegmentName="seg_0" id="72C08792-63DF-A245-29EE-1A61AE7BC87D">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_DATE_INTERVAL</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<rule>end_date &gt; start_date</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

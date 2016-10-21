@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="OE" directorySegmentName="seg_0" id="F5D72E1C-D395-0296-A5BA-255C9D7B660A">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjName>OE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="6DCB8CC0-6698-4D72-4C62-F0219E950638">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<privileges>SELECT, REFERENCES</privileges>
+<table>1DD6FD9A-5C34-DCE1-1CEA-59D69606A9C5</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="4BBBC19A-B6CE-8B1B-EC6F-7195EB85FD45">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>51DFE9F1-6DAF-3A8E-B086-74BDFD5F011C</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="A9CE67CB-2051-A8AA-6C23-F7BCC36A0203">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<privileges>SELECT, REFERENCES</privileges>
+<table>19D20936-FEE2-F23A-3EFF-813D31A2746F</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="4A3F2455-5675-1E22-ED74-77A2DBACCA30">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>BA94C301-31F8-94A9-F660-D1145F46EA31</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="B9DB4582-2D68-07CA-4416-754FE06CE81C">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>B2651F5C-FDD7-1BC1-8638-CDA0BB0AACDC</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="00A3D3CE-A633-F00E-0C70-772BBBCD5C48">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<privileges>SELECT, REFERENCES</privileges>
+<table>A1D92CAA-C74B-2ACF-073A-96EB0991E549</table>
+</Permission>
+</permissions>
+</RoleOraclev10g>

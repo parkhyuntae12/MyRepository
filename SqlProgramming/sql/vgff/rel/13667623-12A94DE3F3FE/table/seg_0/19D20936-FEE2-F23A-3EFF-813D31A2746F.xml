@@ -1,0 +1,342 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="19D20936-FEE2-F23A-3EFF-813D31A2746F" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMPLOYEES">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMPLOYEES</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>employees table. Contains 107 rows. References with departments,&lt;br/&gt;jobs, job_history tables. Contains a self reference.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="D69F8263-6AE3-F107-89E8-FF0D615CF162">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Primary key of employees table.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="6E618DE7-FD89-2229-54AF-0B875E999277">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>First name of the employee. A not null column.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="2A8F6BDB-3E2B-1475-A412-A30352F24E1C">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Last name of the employee. A not null column.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_LAST_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="EMAIL" id="8CF5BAA7-A5ED-95BA-78AE-EFDF468E8664">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Email id of the employee</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_EMAIL_NN</notNullConstraintName>
+</Column>
+<Column name="PHONE_NUMBER" id="32472A18-9A14-9EA1-C782-10AF30650028">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Phone number of the employee; includes country code and area code</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIRE_DATE" id="F0A8F3AC-CB7A-80D1-AE10-483F7ABB8B1C">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>HIRE_DATE</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Date when the employee started on this job. A not null column.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_HIRE_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="97FE91BD-F6D5-261E-1105-C0F029E77CF0">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Current job of the employee; foreign key to job_id column of the&lt;br/&gt;jobs table. A not null column.</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="6807C187-31FD-6519-56FD-67BFD9996A0D" referredColumn="9AD3BAEF-51E1-C5FF-A23C-1C20B7AFFC3B"/>
+</associations>
+</Column>
+<Column name="SALARY" id="049E7526-54A8-BC23-DCEE-E1EC5691F01F">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>SALARY</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Monthly salary of the employee. Must be greater&lt;br/&gt;than zero (enforced by constraint emp_salary_min)</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<constraintName>EMP_SALARY_MIN</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="salary &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMISSION_PCT" id="EB3EE090-5EA1-2249-AEAE-D4ACE2EA5A89">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>COMMISSION_PCT</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Commission percentage of the employee; Only employees in sales&lt;br/&gt;department elgible for commission percentage</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,2,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MANAGER_ID" id="6C9179AB-A521-6C8E-0C2C-01D068AF2D67">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Manager id of the employee; has same domain as manager_id in&lt;br/&gt;departments table. Foreign key to employee_id column of employees table.&lt;br/&gt;(useful for reflexive joins and CONNECT BY query)</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E3057DA-ADD6-D331-4545-D2385AD49970" referredColumn="D69F8263-6AE3-F107-89E8-FF0D615CF162"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="B36DB87B-9571-8DFB-BD31-5548267D0872">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<commentInRDBMS>Department id where employee works; foreign key to department_id&lt;br/&gt;column of the departments table</commentInRDBMS>
+<ownerDesignName>vgff</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="50177191-9719-3C5D-B163-CA6ED4CFB10F" referredColumn="80D95614-ECF6-7303-D90E-1198B6978835"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="16978A92-CEF5-137D-AE20-3B70C3B8B4FD" name="EMP_EMP_ID_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMP_ID_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D69F8263-6AE3-F107-89E8-FF0D615CF162"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29E7D708-9C4C-D2AC-3956-FC9B1CE9B85F" name="EMP_EMAIL_UK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMAIL_UK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CF5BAA7-A5ED-95BA-78AE-EFDF468E8664"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C7756A8-E5FC-0EE6-4D2F-8152132FB026" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMP_DEPARTMENT_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_DEPARTMENT_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B36DB87B-9571-8DFB-BD31-5548267D0872"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="138C3D12-99F8-11BF-E76C-D581F5C53E04" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMP_EMAIL_UK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMAIL_UK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8CF5BAA7-A5ED-95BA-78AE-EFDF468E8664"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E5B95FD-F96F-D83E-2441-5509E0D1ADF6" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMP_EMP_ID_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_EMP_ID_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D69F8263-6AE3-F107-89E8-FF0D615CF162"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0E97931-E28C-B4EE-A92F-C803DA574E7D" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMP_JOB_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_JOB_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97FE91BD-F6D5-261E-1105-C0F029E77CF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F5BA3F5-E0C0-0AE3-AB97-B0B36194ED10" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMP_MANAGER_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_MANAGER_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C9179AB-A521-6C8E-0C2C-01D068AF2D67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="773E44CF-907A-F418-CA61-0FA26FA62AE2" schemaObject="A93A5602-A1D8-37F8-7A3B-B793A1DD2F75" name="EMP_NAME_IX">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>EMP_NAME_IX</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A8F6BDB-3E2B-1475-A412-A30352F24E1C"/>
+<colUsage columnID="6E618DE7-FD89-2229-54AF-0B875E999277"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="851BABD2-FA78-FA77-7A31-0DDA502A0A73" name="EMP_DEPT_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B36DB87B-9571-8DFB-BD31-5548267D0872"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04CD888B-604F-AE42-D47E-571B425067F3" name="EMP_JOB_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:12 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97FE91BD-F6D5-261E-1105-C0F029E77CF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="00CE0B6A-88CE-4B25-D962-9213C1FF8ACE" name="EMP_MANAGER_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 02:30:13 UTC</createdTime>
+<ownerDesignName>vgff</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C9179AB-A521-6C8E-0C2C-01D068AF2D67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
