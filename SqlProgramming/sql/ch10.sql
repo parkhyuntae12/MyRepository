@@ -131,6 +131,3 @@ and e1.employee_id=101;
   from member
   full outer join board
   on member.mid=board.bwriter;
-  
-  
-  
