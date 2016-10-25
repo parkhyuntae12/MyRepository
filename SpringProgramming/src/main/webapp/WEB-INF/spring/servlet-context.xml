@@ -3,7 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
@@ -80,9 +82,9 @@
 	<beans:property name="e" ref="e"/>
 	<beans:property name="f" ref="f"/>
 </beans:bean>
-
+	<!-- 웹 클라이언트가 커넥션 풀을 가지고 있는경우 (소규모프로젝트에선 유리하다)-->
 	<!-- Connection Pool -->
-	 <beans:bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <beans:bean name="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
       <beans:property name="driverClass" value="oracle.jdbc.OracleDriver"/>
       <beans:property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
       <beans:property name="user" value="tester1"/>
@@ -90,6 +92,16 @@
       <beans:property name="maxPoolSize" value="3"/>
       <beans:property name="initialPoolSize" value="1"/>
       <beans:property name="acquireIncrement" value="1"/> 
-      <beans:property name="minPoolSize" value="1"/>
+      <beans:property name="minPoolSize" value="1"/><!-- 객체를 참조할땐 ref가온다(값일땐 value) -->
    </beans:bean> 
+   
+   <!-- WAS가 커넥션 풀을 가지고 있는 경우 (대규모프로젝트에 유리하다)-->
+   <!-- 스프링 관리객체를 만드는 역할을한다(WAS에서 객체를찾아 id를매긴다) -->
+  <!--  <jee:jndi-lookup id="dataSource" jndi-name="jdbc/orcl"></jee:jndi-lookup> -->
+   
+   <!-- JdbcTemplate 객체 생성 -->
+   <beans:bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+   	<beans:property name="dataSource" ref="dataSource"/>
+   </beans:bean>
+   
 </beans:beans>

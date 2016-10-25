@@ -1,58 +1,58 @@
-package com.mycompany.myapp.exam12.dao;
+package com.mycompany.myapp.exam13.dao;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import com.mycompany.myapp.exam12.dto.Member;
+import com.mycompany.myapp.exam13.dto.Member;
 
 
 @Component
-public class MemberDao {
-	private Connection conn; //주입받고, 하나의 연결로 트랜잭션을 처리하려고
+public class Exam13MemberDao {
+	@Autowired//주입받겠다
+	private JdbcTemplate jdbcTemplate;
 	
-	public void setConn(Connection conn) {
-		this.conn = conn;
-	}
-
-	public int insert(Member member) throws SQLException{
+	public int insert(Member member){
 		String sql="insert into member(mid,mname,mpassword,mage,mbirth) values(?,?,?,?,?)";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, member.getMid());
-		pstmt.setString(2, member.getMname());
-		pstmt.setString(3, member.getMpassword());
-		pstmt.setInt(4, member.getMage());
-		pstmt.setDate(5, new Date(member.getMbirth().getTime()));
-		int rowNo= pstmt.executeUpdate();
-		pstmt.close();
+		int rowNo= jdbcTemplate.update(
+				sql, 
+				member.getMid(),
+				member.getMname(),
+				member.getMpassword(),
+				member.getMage(),
+				member.getMbirth()
+				);
 		return rowNo;
 	}
 	
-	public Member selectByMid(String mid) throws SQLException{
+	public Member selectByMid(String mid){
 		String sql="select mid,mname,mpassword,mage,mbirth from member where mid=?";
-		Member member = null;// 객체를 쓸 준비를 하기 위해 null 처리
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, mid);
-		ResultSet rs = pstmt.executeQuery();
-		if(rs.next()){
-			member = new Member();
-			member.setMid(rs.getString("mid"));
-			member.setMname(rs.getString("mname"));
-			member.setMpassword(rs.getString("mpassword"));
-			member.setMage(rs.getInt("mage"));
-			member.setMbirth(rs.getDate("mbirth"));
-		}
-		rs.close();
-		pstmt.close();
-		return member;
+		List<Member> list = jdbcTemplate.query(
+				sql,
+				new Object[] {mid},
+				new RowMapper<Member>(){//rowmapper를 구현한 익명 객체
+					@Override
+					public Member mapRow(ResultSet rs, int rowNum) throws SQLException{
+						//maprow는 행의수만큼 실행하는데 rs에는 resultset의 객체가 들어온다 rowNum은 잘 사용x
+						//rowNum은 현재 몇번째행의 작업이 진행되는지 나타낸다
+						Member member = new Member();
+						member.setMid(rs.getString("mid"));
+						member.setMname(rs.getString("mname"));
+						member.setMpassword(rs.getString("mpassword"));
+						member.setMage(rs.getInt("mage"));
+						member.setMbirth(rs.getDate("mbirth"));
+						return member;
+					}
+				}
+				);
+		return(list.size()!=0)?list.get(0):null;
 	}
-	
+	/*
 	public List<Member> selectByMname(String mname) throws SQLException{//List 타입일때 값이 없을시 리턴타입은 빈 Member 객체가 리턴된다
 		String sql="select mid,mname,mpassword,mage,mbirth from member where mname like ?";
 		List<Member> list = new ArrayList<>();
@@ -94,4 +94,5 @@ public class MemberDao {
 		pstmt.close();
 		return rowNo;
 	}
+	*/
 }

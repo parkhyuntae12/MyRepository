@@ -36,6 +36,5 @@ public class Exam12Controller {
 		exam12Service.join(member);
 		return "redirect:/exam12/index";
 	}
-	
-	
+		
 }
