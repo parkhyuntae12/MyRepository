@@ -28,7 +28,6 @@ public class MemberService {
 	
 	@Autowired
 	private MemberDao memberDao;
-	
 	public int join(Member member){//정상실행과 예외만 존재할때 void로 리턴해도 된다
 		 memberDao.insert(member);//예외처리 노노
 		 return JOIN_SUCCESS;
@@ -59,7 +58,11 @@ public class MemberService {
 		if(member.getMpassword().equals(mpassword)==false) {return null;}
 		return member;
 	}
-	public int modify(Member member){
+	public int modify(Member member,HttpSession session){
+		String mid = (String)session.getAttribute("login");
+		member = memberDao.selectByMid(mid);
+		if(member.getMid().equals(mid)==false){return MODIFY_FAIL_MID;}
+		return MODIFY_SUCCESS;
 		
 	}
 	public int withdraw(String mpassword,HttpSession session){
@@ -70,7 +73,9 @@ public class MemberService {
 		logout(session);
 		return WITHDRAW_SUCCESS;
 	}
-	public boolean isMid(String mid){
-		
+	public boolean isMid(String mid,HttpSession session){//아디찾기
+		mid = (String)session.getAttribute("login");
+		if(mid.equals(memberDao.selectByMid(mid))==false){return false;}
+		return true;
 	}
 }
