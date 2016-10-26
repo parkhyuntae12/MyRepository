@@ -32,7 +32,7 @@ public class Exam13Controller {
 		return "exam13/memberjoinForm";
 	}
 	
-	@RequestMapping(value="/memeberjoin", method=RequestMethod.POST)
+	@RequestMapping(value="/memberjoin", method=RequestMethod.POST)
 	public String join(Member member){
 		logger.info("memeberjoin 처리");
 		exam13MemberService.join(member);

@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B1CAB1A9-F5D6-5EC9-C0F7-980C02A528D1" name="freeboard">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:36:16 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bno" id="2696B812-2D64-42E9-3A8C-957165F6BD66">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:36:37 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="btitle" id="1F4B5337-C38D-3A7A-17C3-1957CB1E4066">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:37:11 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bcontent" id="701A0E5F-4537-30D9-031C-0CF3BBE18AAC">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:37:11 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bwriter" id="18BE8E27-59D3-610F-EE59-03505C6C50B1">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:37:11 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bhitcount" id="2E826B88-E4F2-3075-8802-8B139DE0A025">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:37:11 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bdate" id="5417D35C-2833-E29F-3B2B-0A96B817D74C">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:37:11 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

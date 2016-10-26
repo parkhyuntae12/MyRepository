@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C1955865-D399-E80B-C5E3-28F67F0F819F" name="member">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:36:09 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="mid" id="CD4D0AE0-80AF-FEAC-1C60-60C121253117">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mname" id="FBA20E24-5EFB-1C40-782E-E306B84E5095">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mpassword" id="019B92E1-FED8-3EDE-DDB5-12A0A73BD4FA">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="maddress" id="54B29C34-D929-3296-5D8A-E28B73666D12">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mtel" id="BB0BFEFB-788D-8019-99BC-956886EE98D8">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="memail" id="A70D6CCA-F6A5-BB98-AA71-724460DCEA7D">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="067DAAAC-DCE4-92CB-0203-49E6BC8F4B49" name="member_PK">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:50:59 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD4D0AE0-80AF-FEAC-1C60-60C121253117"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
