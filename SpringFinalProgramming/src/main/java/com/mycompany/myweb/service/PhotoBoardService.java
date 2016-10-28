@@ -40,4 +40,8 @@ public class PhotoBoardService {
 	public PhotoBoard info(int bno){
 		return PhotoBoardDao.selectByBno(bno);
 	}
+	public int getCount(){
+		return PhotoBoardDao.count();
+	}
+	
 }

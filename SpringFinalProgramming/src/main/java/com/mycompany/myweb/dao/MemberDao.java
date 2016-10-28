@@ -19,9 +19,8 @@ public class MemberDao {
 	public int insert(Member member){
 		String sql="insert into member(mid,mname,mpassword,maddress,mtel,memail) values(?,?,?,?,?,?)";
 		//jdbcTemplate 클래스의 특징
-		//데이터 조회, 삽입, 수정, 삭제를 위한 SQL쿼리를 실행할 수 있다. jdbcTemplate클래스를 사용하려면 jdbcTemplate 객체를  생성할 때 DataSource를 전달해주면 된다.
-		
-
+		//데이터 조회, 삽입, 수정, 삭제를 위한 SQL쿼리를 실행할 수 있다. 
+		//jdbcTemplate클래스를 사용하려면 jdbcTemplate 객체를  생성할 때 DataSource를 전달해주면 된다.
 
 		int row = jdbcTemplate.update(
 				sql,
@@ -66,7 +65,7 @@ public class MemberDao {
 			public Member mapRow(ResultSet rs, int row) throws SQLException {
 				Member member = new Member();
 				member.setMid(rs.getString("mid"));
-				member.setMname(rs.getString("mname"));
+				member.setMname(rs.getString("mname")); 
 				member.setMpassword(rs.getString("mpassword"));
 			    member.setMaddress(rs.getString("maddress"));
 			    member.setMtel(rs.getString("mtel"));

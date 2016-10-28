@@ -7,9 +7,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.mycompany.myweb.dto.FreeBoard;
 import com.mycompany.myweb.service.FreeBoardService;
@@ -21,7 +22,21 @@ public class FreeBoardController {
 	private FreeBoardService freeBoardService;
 	
 	@RequestMapping("/list")
-	public String list(@RequestParam(defaultValue="1")int pageNo,Model model){//pageNo가 안넘어오면 디폴트로1을넘겨줘라
+	public String list(String pageNo,Model model,HttpSession session){//pageNo가 안넘어오면 디폴트로1을넘겨줘라
+
+		int intPageNo=1;
+		
+		if(pageNo == null){
+			pageNo= (String) session.getAttribute("pageNo");
+			if(pageNo != null){
+				intPageNo=Integer.parseInt(pageNo);
+			}
+		}else{//pageNo가넘어오지도않고 세션에도 없을땐 바로전 리스트로 넘어간다
+			intPageNo = Integer.parseInt(pageNo);
+		}
+		session.setAttribute("pageNo",String.valueOf(intPageNo));
+		
+		
 		int rowsPerPage = 10;//한페이지당 보이는 갯수
 		int pagesPerGroup = 5;//한그룹당 페이지수 
 		
@@ -32,16 +47,17 @@ public class FreeBoardController {
 		
 		int totalGroupNo = (totalPageNo/pagesPerGroup)+((totalPageNo%pagesPerGroup!=0)?1:0);
 		
-		int groupNo = (pageNo-1)/pagesPerGroup+1;
+		int groupNo = (intPageNo-1)/pagesPerGroup+1;
 		
 		int startPageNo = (groupNo-1)*pagesPerGroup+1;
 		
 		int endPageNo = startPageNo+pagesPerGroup-1;
 		
 		if(groupNo == totalGroupNo) {endPageNo=totalPageNo;}
-		List<FreeBoard> list = freeBoardService.list(pageNo,10);
 		
-		model.addAttribute("pageNo",pageNo);
+		List<FreeBoard> list = freeBoardService.list(intPageNo,rowsPerPage);
+		
+		model.addAttribute("intPageNo",intPageNo);
 		model.addAttribute("rowsPerPage",rowsPerPage);	
 		model.addAttribute("pagesPerGroup",pagesPerGroup);
 		model.addAttribute("totalBoardNo",totalBoardNo);
@@ -50,8 +66,8 @@ public class FreeBoardController {
 		model.addAttribute("groupNo",groupNo);
 		model.addAttribute("startPageNo",startPageNo);
 		model.addAttribute("endPageNo",endPageNo);
-		
 		model.addAttribute("list", list);
+		
 		return "freeboard/list";
 	}
 	
@@ -95,4 +111,12 @@ public class FreeBoardController {
 		freeBoardService.modify(freeBoard);
 		return "redirect:/freeboard/list";
 	}
+	
+	@RequestMapping("/remove")
+	public String remove(int bno){
+		freeBoardService.remove(bno);
+		return "redirect:/freeboard/list";
+		
+	}
+
 }

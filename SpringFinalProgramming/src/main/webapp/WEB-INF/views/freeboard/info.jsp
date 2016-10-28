@@ -37,8 +37,10 @@
 			</tr>
 		</table>
 		<div>
-			<a href="modify?bno=${freeboard.bno}">[수정]</a>
-			<a href="remove?bno=${freeboard.bno}">[삭제]</a>
+			<c:if test="${login == freeboard.bwriter}">
+				<a href="modify?bno=${freeboard.bno}">[수정]</a>
+				<a href="remove?bno=${freeboard.bno}">[삭제]</a>
+			</c:if>
 			<a href="list">[목록]</a>
 		</div>
 </body>
