@@ -18,6 +18,5 @@
 		<br/>
 		2.<a href="${pageContext.servletContext.contextPath}/freeboard/list">자유 게시판</a><br/>
 		3.<a href="${pageContext.servletContext.contextPath}/photoboard/list">포토 게시판</a><br/>
-		
 	</body>
 </html>

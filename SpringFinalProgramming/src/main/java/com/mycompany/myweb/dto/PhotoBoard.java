@@ -6,7 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 public class PhotoBoard {
-	private long bno;
+	private int bno;
 	private String btitle;
 	private String bcontent;
 	private String bwriter;
@@ -18,10 +18,10 @@ public class PhotoBoard {
 	private String savedfile;
 	private String mimetype;
 	
-	public long getBno() {
+	public int getBno() {
 		return bno;
 	}
-	public void setBno(long bno) {
+	public void setBno(int bno) {
 		this.bno = bno;
 	}
 	public String getBtitle() {

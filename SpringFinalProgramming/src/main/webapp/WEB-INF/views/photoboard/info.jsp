@@ -10,7 +10,7 @@
 <body>
 	정보
 	<hr/>
-		<table style="width:570px">
+		<table style="width:570px text-align=center;">
 		    <tr>
 				<td style="background-color:orange; width:100px">번호</td>
 				<td>${photoboard.bno}</td>
@@ -41,7 +41,13 @@
 				멀티파트 관리객체를 만든후 라이브러리 생성 멀티파트타입으로 받아야한다-->
 			</tr>	
 		</table>
-		
+		<div>
+			<c:if test="${login == photoboard.bwriter}">
+				<a href="modify?bno=${photoboard.bno}">[수정]</a>
+				<a href="remove?bno=${photoboard.bno}">[삭제]</a>
+			</c:if>
+			<a href="list">[목록]</a>
+		</div>
 	
 </body>
 </html>

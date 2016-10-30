@@ -17,7 +17,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mycompany.myweb.dto.FreeBoard;
 import com.mycompany.myweb.dto.PhotoBoard;
 import com.mycompany.myweb.service.PhotoBoardService;
 
@@ -146,4 +145,43 @@ public class PhotoBoardController {
 		return "photoboard/info";
 	}
 	
+	@RequestMapping(value = "/modify", method=RequestMethod.GET)
+	public String modifyForm(int bno, Model model,HttpSession session){
+		PhotoBoard photoBoard = photoBoardService.info(bno);
+		model.addAttribute("photoBoard", photoBoard);
+		
+		return "photoboard/modify";
+	}
+	
+	@RequestMapping(value = "/modify", method=RequestMethod.POST)
+	public String modify(PhotoBoard photoBoard, HttpSession session, Model model){
+		
+		PhotoBoard dbPhotoBoard = photoBoardService.info(photoBoard.getBno());
+		try{
+			String mid = (String)session.getAttribute("login");
+			photoBoard.setBwriter(mid);
+			photoBoard.setOriginalfile(photoBoard.getPhoto().getOriginalFilename());
+			
+			String savedfile = new Date().getTime()+photoBoard.getPhoto().getOriginalFilename();
+			String realpath = session.getServletContext().getRealPath("/WEB-INF/photo/"+savedfile);
+			
+			photoBoard.getPhoto().transferTo(new File(realpath));//파일을 절대경로에 저장한다 실제파일을 저장
+			photoBoard.setSavedfile(savedfile);
+			//절대경로 얻는이유는 파일을 저장하기 위해서 실제 저장 행위
+			//C:\Users\Administrator\workspace\.metadata\.......\SpringFinalProgramming\에 저장
+			photoBoard.setMimetype(photoBoard.getPhoto().getContentType());
+			
+			photoBoardService.modify(photoBoard);
+			}catch (Exception e) {
+				e.printStackTrace();
+				
+			}
+		return "redirect:/photoboard/list";
+	}
+	
+	@RequestMapping("/remove")
+	public String remove(int bno){
+		photoBoardService.remove(bno);
+		return "redirect:/photoboard/list";
+	}
 }
