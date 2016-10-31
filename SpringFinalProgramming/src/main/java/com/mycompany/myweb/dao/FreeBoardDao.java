@@ -13,6 +13,7 @@ import com.mycompany.myweb.dto.FreeBoard;
 
 @Component
 public class FreeBoardDao {//스프링의 장점:의존성 관리 수월(필요할때마다 불러올수 있다 ex)@autowired),불필요한 코드가 준다(try/catch,resultset,커넥션 등등)
+	//DAO = 실질적인 DB와의 연결을 담당하는 일을 가진 객체
 	@Autowired
 	private JdbcTemplate jdbcTemplate;//관리객체를 만들어서 주입한다
 	

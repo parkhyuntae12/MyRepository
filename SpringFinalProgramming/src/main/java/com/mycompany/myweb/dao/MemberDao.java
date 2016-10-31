@@ -13,6 +13,7 @@ import com.mycompany.myweb.dto.Member;
 
 @Component
 public class MemberDao {
+	//DAO = 실질적인 DB와의 연결을 담당하는 일을 가진 객체
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
