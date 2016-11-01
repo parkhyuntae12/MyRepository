@@ -9,7 +9,7 @@
 		background-image: url("../common/image/paper.gif");
 		/* background-repeat: no-repeat-x; */
 	}
-	.album{
+	.album{ 
 		width:100px;
 		height:100px;
 		background-image: url("../common/image/photo5.jpg");
