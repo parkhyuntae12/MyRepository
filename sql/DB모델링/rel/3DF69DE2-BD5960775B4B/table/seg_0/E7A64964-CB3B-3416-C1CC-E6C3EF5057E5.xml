@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E7A64964-CB3B-3416-C1CC-E6C3EF5057E5" name="freeboard">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-26 00:31:57 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+</Table>
