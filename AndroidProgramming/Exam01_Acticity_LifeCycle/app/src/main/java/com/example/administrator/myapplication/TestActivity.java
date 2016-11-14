@@ -6,4 +6,5 @@ package com.example.administrator.myapplication;
 
 public class TestActivity {
     //줏석잼
+    //Test22222
 }
