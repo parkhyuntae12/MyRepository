@@ -58,4 +58,7 @@ public class Light {
     public void setContent(String content) {
         this.content = content;
     }
+
+
+
 }
