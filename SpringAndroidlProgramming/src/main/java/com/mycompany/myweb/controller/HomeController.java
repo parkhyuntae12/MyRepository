@@ -1,7 +1,13 @@
 package com.mycompany.myweb.controller;
 
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,5 +52,29 @@ public class HomeController {
 		
 		model.addAttribute("list",list);
 		return "lightList";
+	}
+	
+	@RequestMapping("/getImage")
+	public void getImage(String fileName, HttpServletRequest request, HttpServletResponse response){
+		try{
+			String mimeType = request.getServletContext().getMimeType(fileName);//파일의 확장명을 보고 .확장명(Mime)을 리턴해줌
+			response.setContentType(mimeType);
+			
+			OutputStream os = response.getOutputStream();
+			
+			String filePath =  request.getServletContext().getRealPath("resources/image/"+fileName);
+			InputStream is = new FileInputStream(filePath);
+			
+			byte[] values = new byte[1024];
+			int byteNum=-1;
+			while((byteNum=is.read(values))!=-1){
+				os.write(values,0,byteNum);
+			}
+			os.flush();
+			is.close();
+			os.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 }

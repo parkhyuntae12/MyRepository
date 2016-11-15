@@ -120,7 +120,7 @@ public class PhotoBoardController {
 			
 			OutputStream os = response.getOutputStream();
 			
-			String filePath =  request.getServletContext().getRealPath("/WEB-INF/photo/"+fileName);
+			String filePath =  request.getServletContext().getRealPath("/resources/image/"+fileName);
 			InputStream is = new FileInputStream(filePath);
 			
 			byte[] values = new byte[1024];
