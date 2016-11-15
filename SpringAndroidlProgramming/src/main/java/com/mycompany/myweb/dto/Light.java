@@ -1,7 +1,7 @@
 package com.mycompany.myweb.dto;
 
 public class Light {
-	private String image;
+	/*private String image;
 	private String imageLarge;
 	private String title;
 	private String content;
@@ -39,5 +39,51 @@ public class Light {
 		this.content = content;
 	}
 	
+	*/
+	private String image;
+	private String imageLarge;
+	private String title;
+	private String side;
+	private String content;
+	
+	public Light(String image, String imageLarge, String title, String side, String content) {
+		super();
+		this.image = image;
+		this.imageLarge = imageLarge;
+		this.title = title;
+		this.side = side;
+		this.content = content;
+	}
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getImageLarge() {
+		return imageLarge;
+	}
+	public void setImageLarge(String imageLarge) {
+		this.imageLarge = imageLarge;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getSide() {
+		return side;
+	}
+	public void setSide(String side) {
+		this.side = side;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 	
 }	
