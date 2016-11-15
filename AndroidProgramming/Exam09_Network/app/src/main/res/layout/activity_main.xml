@@ -7,9 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.administrator.myapplication.MainActivity"
-    android:orientation="vertical"
-    >
-
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +16,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/light1_large"
             android:scaleType="fitXY"
             android:id="@+id/imageLarge" />
 
@@ -26,11 +23,11 @@
             android:text="Light Interior"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="17dp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="25dp"
             android:textSize="24sp"
-            android:textStyle="italic"
+            android:textStyle="normal|bold|italic"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -39,26 +36,21 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentBottom="true">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center">
-
                 <ToggleButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/btn_list_img"
                     android:textOff=""
                     android:textOn=""
-                    android:layout_marginRight="5dp"
-                    />
-
+                    android:layout_marginRight="5dp" />
                 <TextView
                     android:text="목록"
                     android:layout_width="wrap_content"
@@ -70,8 +62,8 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center">
                 <ToggleButton
                     android:layout_width="30dp"
@@ -79,9 +71,7 @@
                     android:background="@drawable/btn_review_img"
                     android:textOff=""
                     android:textOn=""
-                    android:layout_marginRight="5dp"
-                    />
-
+                    android:layout_marginRight="5dp" />
                 <TextView
                     android:text="리뷰"
                     android:layout_width="wrap_content"
@@ -93,8 +83,8 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center">
                 <ToggleButton
                     android:layout_width="30dp"
@@ -102,9 +92,7 @@
                     android:background="@drawable/btn_location_img"
                     android:textOff=""
                     android:textOn=""
-                    android:layout_marginRight="5dp"
-                    />
-
+                    android:layout_marginRight="5dp" />
                 <TextView
                     android:text="위치"
                     android:layout_width="wrap_content"
@@ -112,6 +100,7 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="18sp" />
             </LinearLayout>
+
         </LinearLayout>
     </RelativeLayout>
 
