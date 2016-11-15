@@ -1,9 +1,15 @@
 package com.mycompany.myweb.controller;
 
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mycompany.myweb.dto.Light;
 
 @Controller
 public class HomeController {
@@ -24,8 +30,21 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping("/lightlist")
-	public String lightList(){
+	@RequestMapping("/lightList")
+	public String lightList(Model model){
+		List<Light> list = new ArrayList<>();
+		list.add(new Light("light1.png", "light1_large.png", "인테리어 조명1", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light2.png", "light2_large.png", "인테리어 조명2", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light3.png", "light3_large.png", "인테리어 조명3", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light4.png", "light4_large.png", "인테리어 조명4", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light5.png", "light5_large.png", "인테리어 조명5", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light1.png", "light1_large.png", "인테리어 조명6", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light2.png", "light2_large.png", "인테리어 조명7", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light3.png", "light3_large.png", "인테리어 조명8", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light4.png", "light4_large.png", "인테리어 조명9", "거실등으로 사용하면 좋습니다."));
+		list.add(new Light("light5.png", "light5_large.png", "인테리어 조명10", "거실등으로 사용하면 좋습니다."));
 		
+		model.addAttribute("list",list);
+		return "lightList";
 	}
 }
