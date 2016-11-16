@@ -39,7 +39,7 @@ public class HomeController {
 	@RequestMapping("/lightList")
 	public String lightList(Model model){
 		List<Light> list = new ArrayList<>();
-		/*
+		
 	    list.add(new Light("light1.png", "light1_large.png", "인테리어 조명1", "거실등으로 사용하면 좋습니다."));
 		list.add(new Light("light2.png", "light2_large.png", "인테리어 조명2", "거실등으로 사용하면 좋습니다."));
 		list.add(new Light("light3.png", "light3_large.png", "인테리어 조명3", "거실등으로 사용하면 좋습니다."));
@@ -50,7 +50,7 @@ public class HomeController {
 		list.add(new Light("light3.png", "light3_large.png", "인테리어 조명8", "거실등으로 사용하면 좋습니다."));
 		list.add(new Light("light4.png", "light4_large.png", "인테리어 조명9", "거실등으로 사용하면 좋습니다."));
 		list.add(new Light("light5.png", "light5_large.png", "인테리어 조명10", "거실등으로 사용하면 좋습니다."));
-		*/
+		/*
 		list.add(new Light("food01.png", "food01_large.png", "Name                 35,000 Won","Information about popular Korean food dishes and local restaurant listings in the Tri-state area."));
 		list.add(new Light("food02.png", "food02_large.png", "Name                 35,000 Won","Information about popular Korean food dishes and local restaurant listings in the Tri-state area."));
 		list.add(new Light("food03.png", "food03_large.png", "Name           35,000 Won","Information about popular Korean food dishes and local restaurant listings in the Tri-state area."));
@@ -61,7 +61,7 @@ public class HomeController {
 		list.add(new Light("food03.png", "food03_large.png", "Name           35,000 Won","Information about popular Korean food dishes and local restaurant listings in the Tri-state area."));
 		list.add(new Light("food04.png", "food04_large.png", "Name           35,000 Won","Information about popular Korean food dishes and local restaurant listings in the Tri-state area."));
 		list.add(new Light("food05.png", "food05_large.png", "Name           35,000 Won","Information about popular Korean food dishes and local restaurant listings in the Tri-state area."));
-		
+		*/
 		model.addAttribute("list",list);
 		return "lightList";
 	}
