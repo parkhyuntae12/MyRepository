@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- When not selected, use white-->
@@ -7,4 +8,15 @@
     <!-- When selected, use grey -->
     <item android:drawable="@drawable/icon_location2"
         android:state_checked="true" />
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When not selected, use white-->
+    <item android:drawable="@drawable/icon_location"
+        android:state_checked="false"/>
+    
+    <!-- When selected, use grey -->
+    <item android:drawable="@drawable/icon_location2"
+        android:state_checked="true" />
+>>>>>>> 93fc170ebe3765f5b1d37838883084ec1623afc9
 </selector>

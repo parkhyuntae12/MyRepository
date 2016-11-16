@@ -1,20 +1,14 @@
 package com.example.administrator.myapplication;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,12 +19,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
     private ImageView imageLarge;
     private ListView lightList;
     private LightAdapter lightAdapter;
@@ -38,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         imageLarge = (ImageView) findViewById(R.id.imageLarge);
 
@@ -91,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         lightList.post(new Runnable() {
                             @Override
                             public void run() {
-                                lightAdapter = new LightAdapter(MainActivity.this);
+                                lightAdapter = new LightAdapter(Main2Activity.this);
                                 lightAdapter.setList(list);
                                 lightList.setAdapter(lightAdapter);
                                 imageLarge.setImageBitmap(list.get(0).getImageLarge());
