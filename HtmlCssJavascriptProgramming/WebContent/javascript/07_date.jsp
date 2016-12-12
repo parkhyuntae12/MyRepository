@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 		var now = new Date();
 		console.log(now);
-		
+
 		console.log("년 : "+now.getFullYear());
 		console.log("월 : "+(now.getMonth()+1));
 		console.log("일 : "+now.getDate());

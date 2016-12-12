@@ -13,14 +13,14 @@ import com.mycompany.myapp.exam02.Exam02Controller;
 @RequestMapping("/exam03")
 public class Exam03Controller {
 	private static final Logger logger = LoggerFactory.getLogger(Exam03Controller.class);
-	
+
 	@RequestMapping("/index")
 	public String index(){
 		logger.info("index 요청 처리");
 		return "exam03/index";
 	}
 	@RequestMapping("/join")
-	public String join(Member member){//커맨드 객체 
+	public String join(Member member){//커맨드 객체
 		logger.info("join 요청 처리");
 		logger.info("mid :"+member.getMid());
 		logger.info("mname :"+member.getMname());
@@ -33,5 +33,5 @@ public class Exam03Controller {
 		logger.info("mbirth :"+member.getMbirth());
 		return "exam03/index";
 	}
-	
+
 }

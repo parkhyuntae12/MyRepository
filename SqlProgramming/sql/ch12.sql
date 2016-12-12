@@ -3,10 +3,10 @@ select rownum, bno, btitle --rownum은 정렬되기전의 결과에만 적용된
 from board
 order by bno;
 
-select rownum, bno, btitle 
+select rownum, bno, btitle
 from (select bno,btitle from board order by bno);
 
-select rownum, bno, btitle 
+select rownum, bno, btitle
 from (select bno,btitle from board order by bno desc);
 
 --최근 삽입된 행 5개를 가져와라
@@ -14,7 +14,7 @@ select rownum, bno, btitle --순번이 매겨질때마다 조건을 검사한다
 from (select bno,btitle from board order by bno desc)
 where rownum<=5;
 
-select rownum, bno, btitle 
+select rownum, bno, btitle
 from (select bno,btitle from board order by bno desc)
 where rownum>5000;--rownum이 생기지도 않았는데 ~이상은 검색이 되지않는다
 
